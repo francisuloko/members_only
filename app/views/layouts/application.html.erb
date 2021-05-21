@@ -26,7 +26,14 @@
       </div>
     <% end %>
     <header>
-      
+      <%= link_to root_path do %>
+        <h1>MO</h1>
+      <% end %>
+      <nav>
+        <%= link_to "Username", root_path %>
+        <%= link_to "Login/Logout", root_path %>
+        <%= link_to "Signup", root_path %>
+      </nav>
     </header>
 
     <%= yield %>
