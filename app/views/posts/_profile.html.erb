@@ -1,0 +1,9 @@
+<section class=" border border-1 p-3 border-rounded">
+    <article class="d-flex p-0">
+            <figure class="image is-48x48">
+                <%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.email, class: 'image is-rounded') %>
+            </figure>
+            <strong class='mx-2'><%= current_user.username %></strong>
+    </article>
+    <p class=""><small>Posts <%= current_user.posts.count %></small></p>
+</section>
