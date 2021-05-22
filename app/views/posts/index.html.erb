@@ -1,8 +1,10 @@
-<section class=" p-2">
+<section class="p-2">
   <div class="container">
     <div class="row">
       <section class="col-3">
-        <%= render "profile" %>
+        <% if user_signed_in? %>
+          <%= render "profile" %>
+        <% end %>
       </section>
       <section class="col-6">
         <%= render 'feed' %>

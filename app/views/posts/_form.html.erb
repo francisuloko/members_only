@@ -1,7 +1,7 @@
 <%= simple_form_for(@post) do |f| %>
   <div class="field">
     <div class="control">
-      <%= f.input :post, label: "What's trending?",
+      <%= f.input :post, label: "Your secret post",
         input_html: { class: "textarea" },
         wrapper: false,
         label_html: { class: "label" },
@@ -10,12 +10,12 @@
     </div>
   </div>
   
-  <%= f.error_notification message: 'You are not a member' %>
+  <%= f.error_notification message: 'Not a member' %>
   
   <% if user_signed_in? %>
     <%= f.button :submit, class: "bg-primary text-white" %>
   <% else %>
-    <p>Members Only</p>
-    <button class="button is-danger" title="Disabled button" disabled>Create Post</button>
+    <button class="btn bg-danger text-dark" title="Disabled button" disabled>Create Post</button>
+    <span>Members Only*</span>
   <% end %>
 <% end %>
